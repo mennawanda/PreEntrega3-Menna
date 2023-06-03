@@ -1,0 +1,42 @@
+const cursos = [
+    {
+      "id": 01,
+      "nombre": "Nivel Uno - Cocinando vegetales",
+      "precio": 4500,
+      "categoria": "Online",
+      "img": "./images/curso1.jpg",
+      "cantidad": 1,
+    },
+    {
+      "id": 02,
+      "nombre": "Nivel Dos - Quesos de legumbres",
+      "precio": 6000,
+      "categoria": "Online",
+      "img": "./images/curso2.jpg",
+      "cantidad": 1,
+    },
+    {
+      "id": 03,
+      "nombre": "Nivel Tres - Seitán a la parrilla",
+      "precio": 7000,
+      "categoria": "Presencial",
+      "img": "./images/curso3.jpg",
+      "cantidad": 1,
+    },
+    {
+      "id": 04,
+      "nombre": "Nivel Cuatro - Pastas sin huevo",
+      "precio": 7200,
+      "categoria": "Presencial",
+      "img": "./images/curso4.jpg",
+      "cantidad": 1,
+    },
+    {
+      "id": 05,
+      "nombre": "Nivel Cinco - Perfeccionamiento",
+      "precio": 8000,
+      "categoria": "Presencial",
+      "img": "./images/curso5.jpg",
+      "cantidad": 1,
+    },
+];

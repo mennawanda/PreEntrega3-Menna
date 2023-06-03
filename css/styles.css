@@ -1,0 +1,122 @@
+.banner{
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer {
+    text-align: center;
+}
+
+.shop-cursos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    overflow: hidden;
+  width: 330px;
+  height: 430px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.card img {
+    width: 330px;
+    height: 220px;
+  }
+  
+.card h3 {
+    font-weight: 600;
+  }
+  
+.card p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+/*ventana carrito*/
+
+.container{
+    width: 90%;
+    max-height: 88vh;
+    color: white;
+    background-color: #222021;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*for the top*/
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+    margin-left: 380px;
+}
+
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+.headerClass{
+    display: flex;
+    justify-content: space-around;
+    background-color: #222021;
+    color: #fff;
+    width: 100%;
+}
+
+.headerTitle{
+    justify-self: start;
+    margin-left: 250px;
+}
+
+.headerButton{
+    cursor: pointer;
+}
+
+.container > .modal-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+}
+
+.container > div > img{
+    height: 120px;
+    width: 120px;
+}
+
+.totalCarrito{
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+}
+
+/*eliminar curso*/
+.eliminar{
+    cursor:pointer;
+    font-size: 20px;
+}
+
+/*sumar y restar*/
+.sumar{
+    cursor: pointer;
+}
+
+.restar{
+    cursor: pointer;
+}
+
+/*contacto.html*/
+.formulario{
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 50px;
+}
