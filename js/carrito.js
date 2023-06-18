@@ -82,6 +82,11 @@ const eliminarCurso = () => {
         return carritoId != foundId;
     });
 
+    let notyf = new Notyf({
+        position: {x: 'right', y: 'top'},
+    });
+    notyf.success('Curso eliminado correctamente');
+
     funCarrito();
     cursosLocalS();
 }

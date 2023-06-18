@@ -4,9 +4,24 @@ const muestroCarrito = document.getElementById("muestroCarrito");
 
 let carrito =  JSON.parse(localStorage.getItem("carrito")) || [];
 
-//recorro el array y creo las cards para cada curso
-function mostrarCursos(){
-    cursos.forEach((curso) => {
+const getCursos = async () => {
+    try{
+        const response = await fetch("data.json");
+        const data = await response.json(); //asigno la respuesta a la variable data
+        mostrarCursos(data); //llamo a la función que muestra los cursos con los datos obtenidos
+    } catch(error){
+        console.error(error);
+    } finally{
+        console.log("Petición finalizada");
+    }
+    
+};
+
+getCursos();
+
+//recorro y creo las cards para cada curso
+function mostrarCursos(data){
+    data.forEach((curso) => {
         let content = document.createElement("div");
         content.className = "col-lg-3 col-md-4 col-sm-6 mb-4";
         content.innerHTML = `
@@ -25,7 +40,7 @@ function mostrarCursos(){
         let comprar = content.querySelector(".btn-primary");
 
         comprar.addEventListener("click", () => {
-            //acción a realizar cuando se haga click en el boton 
+            //acción a realizar cuando se haga click en el boton
             event.preventDefault();
 
             const repeat = carrito.some((repeatProduct) => repeatProduct.id === curso.id);
@@ -39,7 +54,7 @@ function mostrarCursos(){
             }else{
                 carrito.push({
                     id: curso.id,
-                    img: curso.foto,
+                    img: curso.img,
                     nombre: curso.nombre,
                     precio: curso.precio,
                     cantidad: curso.cantidad,
@@ -56,5 +71,3 @@ function mostrarCursos(){
 function cursosLocalS(){
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
-
-mostrarCursos();
